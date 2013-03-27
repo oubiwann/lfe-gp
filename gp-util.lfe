@@ -29,3 +29,13 @@
 ; convenience function for testing in the LFE REPL
 (defun test-form ()
   (random-form (*operators*)))
+
+; given a generated form and input value, comput the output value
+; for example, from the REPL:
+;   > (: gp-util run-form (: gp-util test-form) 2)
+;   78.4
+;   >
+; XXX update this function to catch errors
+(defun run-form (form input)
+  (funcall (eval `(lambda (=input=) ,form))  ; note: backquote!
+           input))
