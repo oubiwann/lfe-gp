@@ -32,10 +32,12 @@
 
 ; given a generated form and input value, comput the output value
 ; for example, from the REPL:
+;   > (c '"gp-util")
+;   #(module gp-util)
 ;   > (: gp-util run-form (: gp-util test-form) 2)
 ;   78.4
 ;   >
 ; XXX update this function to catch errors
 (defun run-form (form input)
-  (funcall (eval `(lambda (=input=) ,form))  ; note: backquote!
+  (funcall (eval `(lambda (=input=) ,form))
            input))
