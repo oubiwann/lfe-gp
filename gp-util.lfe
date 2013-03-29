@@ -37,7 +37,13 @@
 ;   > (: gp-util run-form (: gp-util test-form) 2)
 ;   78.4
 ;   >
-; XXX update this function to catch errors
+; If there is an error evaluating the generated code, print a message to stdout
+; and return an empty list.
 (defun run-form (form input)
-  (funcall (eval `(lambda (=input=) ,form))
-           input))
+  (try
+    (funcall (eval `(lambda (=input=) ,form))
+             input)
+    (catch ((tuple error-class error-type stack-trace)
+            (: io format '"INFO: Form could not be evaluated: {~p: ~p}.~n"
+               (list error-class error-type))
+            ()))))
