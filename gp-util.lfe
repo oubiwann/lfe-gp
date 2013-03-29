@@ -26,10 +26,6 @@
         (random-element operators)
         (random-element operators)))
 
-; convenience function for testing in the LFE REPL
-(defun test-form ()
-  (random-form (*operators*)))
-
 ; given a generated form and input value, comput the output value
 ; for example, from the REPL:
 ;   > (c '"gp-util")
@@ -47,3 +43,11 @@
             (: io format '"INFO: Form could not be evaluated: {~p: ~p}.~n"
                (list error-class error-type))
             ()))))
+
+; convenience function for testing in the LFE REPL
+(defun test-form ()
+  (random-form (*operators*)))
+
+; convenience function for testing in the LFE REPL
+(defun test-run-form ()
+  (run-form (test-form) (random-int 100)))
