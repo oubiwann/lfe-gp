@@ -16,8 +16,8 @@
 ; of other forms
 (defun random-element (operators)
   (let ((dice-roll (random)))
-    (cond ((< dice-roll (*form-chance*)) (random-form operators))
-          ((< dice-roll (*number-chance*)) (random-int (*number-range*)))
+    (cond ((< dice-roll (+form-chance+)) (random-form operators))
+          ((< dice-roll (+number-chance+)) (random-int (+number-range+)))
           ('true '=input=))))
 
 ; given a list of operators, return a randomly-generated form
@@ -46,7 +46,7 @@
 
 ; convenience function for testing in the LFE REPL
 (defun test-form ()
-  (random-form (*operators*)))
+  (random-form (+operators+)))
 
 ; convenience function for testing in the LFE REPL
 (defun test-run-form ()
