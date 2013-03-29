@@ -37,12 +37,16 @@
 ; and return an empty list.
 (defun run-form (form input)
   (try
-    (funcall (eval `(lambda (=input=) ,form))
-             input)
+    (gp-util--run-form form input)
     (catch ((tuple error-class error-type stack-trace)
             (: io format '"INFO: Form could not be evaluated: {~p: ~p}.~n"
                (list error-class error-type))
             ()))))
+
+; This "private" function does the real work of evaluating a generated form.
+(defun gp-util--run-form (form input)
+    (funcall (eval `(lambda (=input=) ,form))
+             input))
 
 ; convenience function for testing in the LFE REPL
 (defun test-form ()
