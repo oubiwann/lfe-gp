@@ -7,3 +7,5 @@
 (defmacro +form-chance+ _ `0.5)
 (defmacro +input-chance+ _ `0.25)
 (defmacro +number-range+ _ `10)
+; default initial population size
+(defmacro +population-size+ _ `10)
