@@ -81,7 +81,7 @@ the same lines as below (these are randomly generated, so yours will differ):
 Once you've confirmed that random forms are being generated, you can evaluate
 randomly generated forms:
 
-..code:: lisp
+.. code:: lisp
 
     > (: gp-util test-run-form)
 
