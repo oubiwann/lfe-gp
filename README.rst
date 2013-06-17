@@ -2,7 +2,7 @@
 Genetic Programming
 ###################
 
-**In Lisp Flavored Erlang**
+*In Lisp Flavored Erlang*
 
 
 Introduction
