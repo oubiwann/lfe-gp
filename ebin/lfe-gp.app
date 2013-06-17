@@ -10,7 +10,7 @@
   %% All modules used by the application.
   {modules,
    [
-    'gp-init', 'gp-fit', 'gp-util'
+    'gp-const', 'gp-init', 'gp-fit', 'gp-util'
    ]},
 
   %% All of the registered names the application uses. This can be ignored.
