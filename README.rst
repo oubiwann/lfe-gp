@@ -35,12 +35,13 @@ Get the code from Github:
     $ git clone git@github.com:lfe/lfe-gp.git
 
 
-Compile everything:
+Run the unit tests (which will compile everything) to make sure everything's
+running as expected:
 
 .. code:: bash
 
     $ cd lfe-gp
-    $ make
+    $ make check
 
 And start playing!
 
