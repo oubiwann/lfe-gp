@@ -1,4 +1,4 @@
-(defmodule lfe-gp_tests
+(defmodule gp-fit_tests
   (export all)
   (import
     (from lfeunit-util
@@ -14,5 +14,5 @@
       (assert-throw 2)
       (assert-exit 2))))
 
-(defun noop_test ()
-  (assert-equal 1 2))
+(defun placedholder_test ()
+  (assert-equal 1 1))

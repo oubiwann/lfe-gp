@@ -1,4 +1,4 @@
-(defmodule lfe-gp_tests
+(defmodule gp-util_tests
   (export all)
   (import
     (from lfeunit-util
@@ -12,7 +12,15 @@
       (assert-exception 3)
       (assert-error 2)
       (assert-throw 2)
-      (assert-exit 2))))
+      (assert-exit 2)))
+  (import
+    (from gp-util
+      (random-nth 1)
+      (random-element 1)
+      (random-form 1))))
 
-(defun noop_test ()
-  (assert-equal 1 2))
+(defun random-nth_test ()
+  (let* ((givens (list 1 2 3 4 5 6 7 8 9 10))
+         (pick-one (random-nth givens))
+         (in-givens (: lists member pick-one givens)))
+    (assert `',in-givens)))
