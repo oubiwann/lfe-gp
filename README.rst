@@ -1,13 +1,15 @@
-###########################################
-Genetic Programming in Lisp Flavored Erlang
-###########################################
+###################
+Genetic Programming
+###################
+
+**In Lisp Flavored Erlang**
+
 
 Introduction
 ============
 
-The first work done for this repo is a port of the Common Lisp blog post done
-by Erik Winkels in 2011:
-  http://aerique.blogspot.com/2011/01/baby-steps-into-genetic-programming.html
+The first work done for this repo is a port of the `Common Lisp blog post`_
+done by Erik Winkels in 2011.
 
 
 Dependencies
@@ -27,16 +29,21 @@ Installation
 ============
 
 Get the code from Github:
+
 .. code:: bash
 
     $ git clone git@github.com:lfe/lfe-gp.git
 
 
 Compile everything:
+
 .. code:: bash
 
+    $ cd lfe-gp
     $ make
-    $ 
+
+And start playing!
+
 
 Usage
 =====
@@ -45,6 +52,7 @@ TBD
 
 .. Links
 .. -----
+.. _Common Lisp blog post: http://aerique.blogspot.com/2011/01/baby-steps-into-genetic-programming.html
 .. _rebar: https://github.com/rebar/rebar
 .. _LFE: https://github.com/rvirding/lfe
 .. _lfeunit: https://github.com/lfe/lfeunit
