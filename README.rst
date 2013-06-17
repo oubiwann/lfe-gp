@@ -88,6 +88,24 @@ randomly generated forms:
 We don't show the output here, but it could be just about anything! (Including
 an error message letting you know that the form couldn't be evaluated.)
 
+
+Populations
+-----------
+
+Now that you've got a taste for some of the basics, let's do some work. Here's
+the function that sets up a new population for you:
+
+.. code:: lisp
+
+    > (: gp-init create-initial-population)
+
+This output of this could be quite large! If you want to limit the size, try
+this:
+
+.. code:: lisp
+
+    > (: gp-init create-initial-population 1)
+
 .. Links
 .. -----
 .. _Common Lisp blog post: http://aerique.blogspot.com/2011/01/baby-steps-into-genetic-programming.html
