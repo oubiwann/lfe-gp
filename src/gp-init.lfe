@@ -1,9 +1,13 @@
 (defmodule gp-init
   (export all)
-  (import (from gp-util (random-form 1))))
-
-; include the constants
-(include-file "include/gp-const.lfe")
+  (import
+    (from gp-util
+      (random-form 1)))
+  (import
+    (from gp-const
+      (+operators+ 0)
+      (+population-size+ 0)
+      )))
 
 ; given no operators, use default values for generating a population of LFE
 ; forms for use in a GP run
