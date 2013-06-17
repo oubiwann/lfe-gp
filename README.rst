@@ -49,7 +49,44 @@ And start playing!
 Usage
 =====
 
-TBD
+Warm-ups
+--------
+
+Fire up an LFE REPL:
+
+.. code:: bash
+
+    $ make shell
+
+Once at the prompt, build a few random forms. You should see something along
+the same lines as below (these are randomly generated, so yours will differ):
+
+.. code:: lisp
+
+    > (: gp-util test-form)
+    (quote 10 4)
+    > (: gp-util test-form)
+    ((+ - * /) =input= 5)
+    > (: gp-util test-form)
+    ((+ - * /)
+     (quote 2 3)
+     (quote
+      ((+ - * /)
+       (quote
+        (quote 10 (quote (quote =input= =input=) =input=))
+        (quote =input= (quote (quote =input= 7) ((+ - * /) =input= =input=))))
+       =input=)
+      3))
+
+Once you've confirmed that random forms are being generated, you can evaluate
+randomly generated forms:
+
+..code:: lisp
+
+    > (: gp-util test-run-form)
+
+We don't show the output here, but it could be just about anything! (Including
+an error message letting you know that the form couldn't be evaluated.)
 
 .. Links
 .. -----
