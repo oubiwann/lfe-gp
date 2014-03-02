@@ -1,12 +1,16 @@
 (defmodule gp-util
   (export all)
-  (import (rename lists ((nth 2) nth))
-          (rename erlang ((length 1) length))
-          (rename random ((uniform 0) random))
-          (rename random ((uniform 1) random-int))))
-
-; include the constants
-(include-file "include/gp-const.lfe")
+  (import
+    (rename lists
+      ((nth 2) nth))
+    (rename random
+      ((uniform 0) random)
+      ((uniform 1) random-int))
+    (from gp-const
+      (+form-chance+ 0)
+      (+number-chance+ 0)
+      (+number-range+ 0)
+      (+operators+ 0))))
 
 ; get the a random element from a given sequence
 (defun random-nth (seq)
